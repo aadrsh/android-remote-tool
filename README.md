@@ -13,4 +13,4 @@ Step 4-Connect your PC with mobile hotspot and run the python script.
 
 Step 5-Enjoy.
 
-I made it as a gaming remote you are free to customize it
+I made it as a gaming remote but you are free to customize it
