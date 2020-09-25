@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomJoystick">
+        <attr name="Joystick_Scale" format="float"/>
+        <attr name="setX" format="integer"/>
+        <attr name="setY" format="integer" />
+    </declare-styleable>
+</resources>

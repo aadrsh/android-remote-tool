@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SocketActivity">
+
+    <TextView
+        android:id="@+id/ip_address_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IP"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/status_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ip_address_tv" />
+
+    <com.android.joystick.CustomJoystick
+        android:id="@+id/my_joystick"
+        android:layout_width="0sp"
+        android:layout_height="match_parent"
+        app:setX="-100"
+        app:setY="100"
+        app:layout_constraintEnd_toEndOf="@id/center_guideline"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+    <com.android.gyroscope.classes.CustomImageView
+        android:id="@+id/swipe_view"
+        android:layout_width="0sp"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/center_guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/center_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <com.android.gyroscope.classes.CustomButton
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:scaleType="fitXY"
+        android:id="@+id/scope_button"
+        android:src="@drawable/scope"
+        android:background="#00ffffff"
+        app:layout_constraintBottom_toTopOf="@id/fire_button"
+        app:layout_constraintStart_toEndOf="@id/fire_button"
+        />
+
+    <com.android.gyroscope.classes.CustomButton
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:id="@+id/fire_button"
+        android:scaleType="fitXY"
+        android:src="@drawable/thumb"
+        android:layout_marginBottom="150sp"
+        android:layout_marginEnd="150sp"
+        android:background="#00ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <com.android.gyroscope.classes.CustomButton
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:id="@+id/jump_button"
+        android:scaleType="fitXY"
+        android:src="@drawable/jump"
+        android:layout_marginBottom="125sp"
+        android:background="#00ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fire_button"
+        />
+
+    <com.android.gyroscope.classes.CustomButton
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:id="@+id/crouch_button"
+        android:scaleType="fitXY"
+        android:src="@drawable/crouch"
+        android:background="#00ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/fire_button"
+        />
+    <com.android.gyroscope.classes.CustomButton
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:id="@+id/prone_button"
+        android:scaleType="fitXY"
+        android:src="@drawable/prone"
+        android:background="#00ffffff"
+        app:layout_constraintStart_toEndOf="@id/crouch_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
